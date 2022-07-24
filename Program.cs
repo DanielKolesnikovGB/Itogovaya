@@ -60,3 +60,12 @@ void PrintOSA (string[] OSA)                                //OSA - исходя
 }
 
 //Блок работы с пользователем
+
+Console.Write("Введите кол-во элеметов, которое желаете задать: ");
+int ISAL = int.Parse(Console.ReadLine());                    //ISAL - длина входящего массива строк
+string[] InputStringArray = new string [ISAL];  
+FillISA (InputStringArray);
+int OSAL = ElementCountingInISAForOSA(InputStringArray);     //OSAL - длина исходящего массива строк
+string[] OutputStringArray = new string [OSAL];
+FillOSA (InputStringArray, OutputStringArray);
+PrintOSA (OutputStringArray);
